@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<!-- Template by html.am -->
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>2 Column Layout &mdash; Right Menu with Header &amp; Footer</title>
+		<style type="text/css">
+		
+			body {
+				margin:0;
+				padding:0;
+				font-family: Sans-Serif;
+				line-height: 1.5em;
+			}
+			
+			header {
+				background: #ccc;
+				height: 100px;
+			}
+			
+			header h1 {
+				margin: 0;
+				padding-top: 15px;
+			}
+			
+			main {
+				padding-bottom: 10010px;
+				margin-bottom: -10000px;
+				float: left;
+				width: 100%;
+			}
+			
+			nav {
+				padding-bottom: 10010px;
+				margin-bottom: -10000px;
+				float: left;
+				width: 230px;
+				margin-left: -230px;
+				background: #eee;
+			}
+			
+			footer {
+				clear: left;
+				width: 100%;
+				background: #ccc;
+				text-align: center;
+				padding: 4px 0;
+			}
+	
+			#wrapper {
+				overflow: hidden;
+			}
+						
+			#content {
+				margin-right: 230px; /* Same as 'nav' width */
+			}
+			
+			.innertube {
+				margin: 15px; /* Padding for content */
+				margin-top: 0;
+			}
+		
+			.righthand {
+				float: right;
+			}
+			p {
+				color: #555;
+			}
+	
+			nav ul {
+				list-style-type: none;
+				margin: 0;
+				padding: 0;
+			}
+			
+			nav ul a {
+				color: darkgreen;
+				text-decoration: none;
+			}
+		
+		</style>
+			
+	
+	</head>
+	
+<script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyBP13nj9XEVHFHJncYlmDvhZ9paWYPsV5U&callback=initMap"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>	
+<script src="gujral_hw.js"></script>
+
+	<body background="backpic3.jpg">		
+
+		<header>
+			<div class="innertube">
+				<h1><u>Airline/Airport Rating Agency</u></h1>
+			</div>
+		</header>
+		
+		
+				
+			<div class="righthand">
+				<h1><u>Rate the Airports</u></h1><br>
+				<a id="button1" href="#"><b>Hide/Show Rating Airport</b></a>
+				<div id = "item1">
+					<br>
+					<label class="airportlist"><b>Airports</b></label>
+					<select id = "airport"></select><br>
+					<label class="airportstaff"><b>Staff Service</b></label>
+					<select id="AirportRating"></select><br>
+					<label class="Cleanliness"><b>Terminal Cleanliness</b></label>
+					<select id="AirportRating1"></select><br>
+					<label class="seating"><b>Terminal Seating<b></label>
+					<select id="AirportRating2"></select><br>
+					<label class="queuing"><b>Queuing time</b></label>
+					<select id="AirportRating3"></select><br>
+					<script type="text/javascript" src="jquery-2.1.4.min.js"></script>
+					<script type="text/javascript" src="gujral_hw.js"></script>
+					<br>
+					<button id= "submitairportrating" href="#"><b>Submit</b></button>
+				</div>
+				<br>
+				<a id="showtrailer1" href="#"><b>Show Selected Airport trailer</b></a>
+				<br><br>
+				<iframe id="Video1" width="420" height="315" src="https://www.youtube.com/embed/f14jF6yvUQE"> </iframe>
+			</div>
+				
+				
+				
+				
+			
+		
+	<h1><u>Rate the Airlines</u></h1>
+	
+	
+	<a id="button" href="#"><b>Hide/Show Rating Airline</b></a>
+
+	
+	
+	<div class="lefthand" id="item"><br>
+		<label class="airlinelist"><b>Airlines</b></label>
+		<select id = "airline"></select><br>
+		<label class="staff"><b>Staff Service</b></label>
+		<select id="Rating"></select><br>
+		<label class="staff"><b>Food/Beverage</b></label>
+		<select id="Rating1"></select><br>
+		<label class="staff"><b>Inflight Entertainment<b></label>
+		<select id="Rating2"></select><br>
+		<label class="staff"><b>Lounge Comfort</b></label>
+		<select id="Rating3"></select><br>
+		<script type="text/javascript" src="jquery-2.1.4.min.js"></script>
+		<script type="text/javascript" src="gujral_hw.js"></script>
+		<br>
+		<button id= "submitrating" href="#"><b>Submit</b></button>
+	</div>
+	
+	<br>
+				
+	<div>
+		<a id="showtrailer" href="#"><b>Show Selected Airline trailer</b></a>
+	</div>
+
+	<br>
+	
+	<div id = "trailer">
+		<iframe id="Video" width="420" height="315" src="https://www.youtube.com/embed/D-E3vy0KrTU"> </iframe>
+	</div>
+
+
+						
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.js"></script>
+  <script type="text/javascript">
+  var jsonData = {
+      "Table": [{
+          "airlineid": "1",
+          "airlinename": "American Airlines"
+      }, {
+          "airlineid": "2",
+          "airlinename": "JetBlue Airlines"
+      }, {
+          "airlineid": "3",
+          "airlinename": "United Airlines"
+      }, {
+          "airlineid": "4",
+          "airlinename": "Delta Airlines"
+      }, {
+          "airlineid": "5",
+          "airlinename": "Virgin America"
+      }]
+};
+
+ var jsonData3 = {
+      "Table1": [{
+          "airportid": "1",
+          "airportname": "JFK International Airport"
+      }, {
+          "airportid": "2",
+          "airportname": "Boston International Airport"
+      }, {
+          "airportid": "3",
+          "airportname": "Atlanta International Airport"
+      }, {
+          "airportid": "4",
+          "airportname": "Dulles International Airport"
+      }, {
+          "airportid": "5",
+          "airportname": "Los Angeles International Airport"
+      }]
+};
+
+var jsonData1 = {
+	  
+	   "Rate": [{
+          "levelid": "1",
+          "level": "Excellent"
+      }, {
+          "levelid": "2",
+          "level": "Good"
+      }, {
+          "levelid": "3",
+          "level": "Fair"
+      }, {
+          "levelid": "4",
+          "level": "Poor"
+      }]
+	  
+  };
+  
+  
+ var jsonData2 = {
+ 
+	"AirlineVideo": [{
+		"Name": "American Airlines",
+		"src": "https://www.youtube.com/embed/D-E3vy0KrTU"
+	}, {
+		"Name": "JetBlue Airlines",
+		"src": "https://www.youtube.com/embed/mUFf4RA6tQU"
+	}, {
+		"Name": "United Airlines",
+		"src": "https://www.youtube.com/embed/0oZDEDMO7X0"
+	}, {
+		"Name": "Delta Airlines",
+		"src": "https://www.youtube.com/embed/GM24RxCvhfI"
+	}, {
+		"Name": "Virgin America",
+		"src": "https://www.youtube.com/embed/pIKcHcEVJAI"
+	}]
+ 
+ };
+ 
+ var jsonData4 = {
+ 
+	"AirportVideo": [{
+		"Name": "JFK International Airport",
+		"src": "https://www.youtube.com/embed/E0dCcRMKnrI"
+	}, {
+		"Name": "Boston International Airport",
+		"src": "https://www.youtube.com/embed/zk7qaK1fKZk"
+	}, {
+		"Name": "Atlanta International Airport",
+		"src": "https://www.youtube.com/embed/hJQ9w6o7URM"
+	}, {
+		"Name": "Dulles International Airport",
+		"src": "https://www.youtube.com/embed/jnVQlj75W6w"
+	}, {
+		"Name": "Los Angeles International Airport",
+		"src": "https://www.youtube.com/embed/f14jF6yvUQE"
+	}]
+ 
+ };
+  
+  
+  
+ 
+     $(document).ready(function () {
+         var listItems = '<option selected="selected" value="0">- Select Airline -</option>';
+		 var listItems1 = '<option selected="selected" value="0">- Select Rating -</option>';
+		 var listItems2 = '<option selected="selected" value="0">- Select Airport -</option>';
+ 
+      for (var i = 0; i < jsonData.Table.length; i++) {
+             listItems += "<option value='" + jsonData.Table[i].airlineid + "'>" + jsonData.Table[i].airlinename + "</option>";
+			 
+         }
+		 
+		  for (var i = 0; i < jsonData1.Rate.length; i++) {
+            
+			 listItems1 += "<option value='" + jsonData1.Rate[i].levelid + "'>" + jsonData1.Rate[i].level + "</option>";
+         }
+		 
+		 for (var i = 0; i < jsonData3.Table1.length; i++) {
+            
+			 listItems2 += "<option value='" + jsonData3.Table1[i].airportid + "'>" + jsonData3.Table1[i].airportname + "</option>";
+         }
+ 
+         $("#airline").html(listItems);
+		 $("#Rating").html(listItems1);
+		 $("#Rating1").html(listItems1);
+		 $("#Rating2").html(listItems1);
+		 $("#Rating3").html(listItems1);
+		 $("#airport").html(listItems2);
+		 $("#AirportRating").html(listItems1);
+		 $("#AirportRating1").html(listItems1);
+		 $("#AirportRating2").html(listItems1);
+		 $("#AirportRating3").html(listItems1);
+     });
+	 
+	 
+	 $("#showtrailer").click(function(){
+
+		var selectedValue = $("#airline option:selected").text();
+		
+		
+		if( selectedValue == "- Select Airline -")
+		{
+			window.alert("Please select airline");
+		}
+		else
+		{
+			var air_video = "";
+			
+			
+			 for (var i = 0; i < jsonData2.AirlineVideo.length; i++) {
+			 
+				if(jsonData2.AirlineVideo[i].Name == selectedValue)
+				{
+					
+					air_video = jsonData2.AirlineVideo[i].src;
+				}
+            
+			}
+			
+			console.log(air_video);
+			
+			
+			$("#Video").attr('src', air_video);	
+		}
+	});
+	
+	$("#submitrating").click(function(){
+
+		var selectedValue = $("#airline option:selected").text();
+		var selectedValue1 = $("#Rating option:selected").text();
+		var selectedValue2 = $("#Rating1 option:selected").text();
+		var selectedValue3 = $("#Rating2 option:selected").text();
+		var selectedValue4 = $("#Rating3 option:selected").text();
+		
+		if( selectedValue == "- Select Airline -")
+		{
+			window.alert("Please select airline");
+		}
+		else if( selectedValue1 == "- Select Rating -")
+		{
+			window.alert("Please select staff rating");
+		}
+		else if( selectedValue2 == "- Select Rating -")
+		{
+			window.alert("Please select food/beverage rating");
+		}
+		else if( selectedValue3 == "- Select Rating -")
+		{
+			window.alert("Please select inflight entertainment rating");
+		}
+		else if( selectedValue4 == "- Select Rating -")
+		{
+			window.alert("Please select lounge comfort rating");
+		}
+		else
+		{
+			window.alert("Thank you for rating: " + selectedValue );
+		}
+		
+	});
+	
+	$("#showtrailer1").click(function(){
+
+		var selectedValue = $("#airport option:selected").text();
+		
+		
+		if( selectedValue == "- Select Airport -")
+		{
+			window.alert("Please select airport");
+		}
+		else
+		{
+			var airport_v = "";
+			
+			
+			 for (var i = 0; i < jsonData4.AirportVideo.length; i++) {
+			 
+				if(jsonData4.AirportVideo[i].Name == selectedValue)
+				{
+					
+					airport_v = jsonData4.AirportVideo[i].src;
+				}
+            
+			}
+			
+			console.log(airport_v);
+			
+			
+			$("#Video1").attr('src', airport_v);	
+		}
+	});
+	 
+	$("#submitairportrating").click(function(){
+
+		var selectedValue = $("#airport option:selected").text();
+		var selectedValue1 = $("#AirportRating option:selected").text();
+		var selectedValue2 = $("#AirportRating1 option:selected").text();
+		var selectedValue3 = $("#AirportRating2 option:selected").text();
+		var selectedValue4 = $("#AirportRating3 option:selected").text();
+		
+		if( selectedValue == "- Select Airport -")
+		{
+			window.alert("Please select airport");
+		}
+		else if( selectedValue1 == "- Select Rating -")
+		{
+			window.alert("Please select staff rating");
+		}
+		else if( selectedValue2 == "- Select Rating -")
+		{
+			window.alert("Please select terminal cleanliness rating");
+		}
+		else if( selectedValue3 == "- Select Rating -")
+		{
+			window.alert("Please select terminal seating rating");
+		}
+		else if( selectedValue4 == "- Select Rating -")
+		{
+			window.alert("Please select queuing time rating");
+		}
+		else
+		{
+			window.alert("Thank you for rating: " + selectedValue );
+		}
+		
+	});
+	
+	
+	$( "#button1").click(function() {
+    $( "#item1").toggle();
+	});
+
+	
+  </script>	
+
+ <br>
+	<div>
+	<h1><b>Office Address: </b></h1><br>
+	<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d96828.1318146371!2d-74.03961456737042!3d40.676632323102!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x40a06c78f79e5de6!2sOne+World+Trade+Center!5e0!3m2!1sen!2sus!4v1481713443663" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+	</div>
+
+		
+		<footer>
+			<section id="temp-project-name-container">
+					<b>Angad Gujral</b>: Airline/Airport Rating Agency
+		</footer>
+	
+	</body>
+</html>

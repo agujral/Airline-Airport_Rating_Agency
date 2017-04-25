@@ -1,0 +1,18 @@
+{"Table": [
+	  {
+          "airlineid": "1",
+          "airlinename": "American Airlines"
+      }, {
+          "airlineid": "2",
+          "airlinename": "JetBlue Airlines"
+      }, {
+          "airlineid": "3",
+          "airlinename": "United Airlines"
+      }, {
+          "airlineid": "4",
+          "airlinename": "Delta Airlines"
+      }, {
+          "airlineid": "5",
+          "airlinename": "Virgin America"
+      }
+]}
